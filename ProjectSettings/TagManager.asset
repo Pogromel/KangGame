@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Trap
   - Gold
+  - Powerup
+  - Powerup1
   layers:
   - Default
   - TransparentFX

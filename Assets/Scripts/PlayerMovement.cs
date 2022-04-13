@@ -64,4 +64,21 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Powerup1")
+        {
+            Destroy(collision.gameObject);
+            runSpeed = 80f;
+            StartCoroutine(ResetPower());
+        }
+    }
+
+    private IEnumerator ResetPower()
+    {
+        yield return new WaitForSeconds(10);
+        runSpeed = 56f;
+
+    }
 }

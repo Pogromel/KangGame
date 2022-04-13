@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -62,8 +64,17 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+		if (collision.tag == "Powerup")
+		{ 
+			Destroy(collision.gameObject);
+			m_JumpForce = 1200f;
+			StartCoroutine(ResetPower());
+		}
+    }
 
-	public void Move(float move, bool crouch, bool jump)
+    public void Move(float move, bool crouch, bool jump)
 	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -146,4 +157,12 @@ public class CharacterController2D : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+    private IEnumerator ResetPower()
+    {
+		yield return new WaitForSeconds(10);
+		m_JumpForce = 870f;
+		
+    }
+
 }
