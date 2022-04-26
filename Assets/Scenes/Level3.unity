@@ -38935,9 +38935,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1768718417411599600, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3053755205525932349, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
       propertyPath: m_Name
-      value: 'Player '
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053755205525932351, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3053755205525932356, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
       propertyPath: m_RootOrder
@@ -38945,11 +38953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3053755205525932356, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.41
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 3053755205525932356, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 256.961
+      value: 258.9
       objectReference: {fileID: 0}
     - target: {fileID: 3053755205525932356, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38987,6 +38995,26 @@ PrefabInstance:
       propertyPath: coinstext
       value: 
       objectReference: {fileID: 208093804}
+    - target: {fileID: 3661479350498862274, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3982042002328086152, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789785836523149991, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500346504599749732, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763114634095243204, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22bde8dc623963540af70326dbfb44f1, type: 3}
 --- !u!1 &690782020
