@@ -9,6 +9,7 @@ TagManager:
   - Gold
   - Powerup
   - Powerup1
+  - OnGround
   layers:
   - Default
   - TransparentFX

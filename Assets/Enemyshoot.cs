@@ -24,14 +24,21 @@ public class Enemyshoot : MonoBehaviour
             {
                 nextFire = Time.time + fireRate;
                 Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-                GetComponent<AudioSource>().Play();
+                
             }
             
             
         }
     }
-    
+
+    void Update()
+    {
+        if(transform.position.y < -7)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
 
-    
+
 }
