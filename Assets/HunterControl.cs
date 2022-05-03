@@ -31,7 +31,7 @@ public class HunterControl : MonoBehaviour
     {
        if(mustPatrol)
         {
-            mustTurn = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
+            mustTurn = Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
         }
     }
 

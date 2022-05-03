@@ -20,7 +20,16 @@ public class PlayerLife : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Trap"))
+        if (collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("bullet"))
+        {
+            Die();
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("bullet"))
         {
             Die();
         }
@@ -32,6 +41,7 @@ public class PlayerLife : MonoBehaviour
         deathSoundEffect.Play();
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
+        print("death");
     }
 
     private void RestartLevel()

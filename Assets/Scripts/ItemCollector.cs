@@ -19,7 +19,9 @@ public class ItemCollector : MonoBehaviour
             collectionSoundEffect.Play();
             Destroy(collision.gameObject);
             coins = coins + 1;
-            coinstext.text = "coins " + coins;
+            //GameManager.updatecoin(coins);
+            GameObject.Find("GameManager").GetComponent<GameManager>().updatecoins(coins);
+            //coinstext.text = "coins " + coins;
         }
     }
 }

@@ -13,5 +13,12 @@ public class enemyBullet : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("map"))
+        {
+            Destroy(gameObject);
+        }
 
+    }
 }

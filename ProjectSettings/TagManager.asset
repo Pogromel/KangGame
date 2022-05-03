@@ -10,6 +10,8 @@ TagManager:
   - Powerup
   - Powerup1
   - OnGround
+  - bullet
+  - map
   layers:
   - Default
   - TransparentFX
