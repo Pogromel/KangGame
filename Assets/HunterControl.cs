@@ -14,7 +14,8 @@ public class HunterControl : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheckPos;
     public LayerMask groundLayer;
-
+    public Collider2D bodyCollider;
+     
     void Start()
     {
         mustPatrol = true;
@@ -38,7 +39,7 @@ public class HunterControl : MonoBehaviour
 
     void Patrol()
     {
-        if (mustTurn)
+        if (mustTurn || bodyCollider.IsTouchingLayers(groundLayer)) 
         {
             Flip(); 
         }
