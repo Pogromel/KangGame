@@ -8,8 +8,9 @@ public class GameManager : MonoBehaviour
 {
   public static GameManager instance = null;
    public Text coinstext;
-  //Awake is always called before any Start functions
-  void Awake()
+   private int coins = 0;
+    //Awake is always called before any Start functions
+    void Awake()
   {
       //Check if instance already exists
       if (instance == null)
@@ -31,14 +32,21 @@ public class GameManager : MonoBehaviour
   void Update()
   {
     //Checks if build index is greater than ("#") 
-    if (SceneManager.GetActiveScene ().buildIndex > 6)
+    if (SceneManager.GetActiveScene ().buildIndex > 7)
     {
       Destroy(GameObject.FindWithTag("GameManager"));
     }
   }
 
-   public void updatecoins(int coins)
+   public void updatecoins()
+
     {
         coinstext.text = "coins " + coins;
+
+    }
+
+    public void increasecoins()
+    { 
+        coins = coins + 1; 
     }
 }
