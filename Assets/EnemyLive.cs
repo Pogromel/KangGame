@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyLive : MonoBehaviour
 {
-
+    public GameObject blocklocation2;
     public GameObject blocklocation;
     private Rigidbody2D rb;
     public GameObject block;
     public int width = 10;
     public int height = 4;
-
+    
 
 
     private void Start()
@@ -29,19 +29,13 @@ public class EnemyLive : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Die();
-        }
-
-    }
+    
 
     private void Die()
     {
         rb.bodyType = RigidbodyType2D.Static;
         Instantiate(block, blocklocation.transform.position, Quaternion.identity);
+        Instantiate(block, blocklocation2.transform.position, Quaternion.identity);
         Destroy(gameObject);
         print("death");
 
